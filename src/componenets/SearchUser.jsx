@@ -36,6 +36,9 @@ const SearchUser = () => {
   useEffect(() => {
     if (attempts <= 0) {
       setErrorMsg("Too many attempts, REDIRECTING...");
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
     }
   }, [attempts]);
   return (
